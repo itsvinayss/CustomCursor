@@ -1,0 +1,170 @@
+@font-face {
+  font-family: collonse;
+  src: url(./collonse/Collonse.ttf);
+}
+
+body{
+
+  cursor: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: collonse;
+  background-color: black;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+ 
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+  transition: opacity 1s ease;
+}
+
+#preloader-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#cursor {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100;
+  background-color: #FF5F38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Prevent cursor from blocking interaction with other elements */
+}
+
+#page1-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+nav {
+  width: 100%; /* Make navbar width 100% */
+}
+
+.main-nav .logo img{
+  margin-top: 5vw;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 5vw;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Align items to left and right */
+  align-items: center;
+  padding: 0 20px; /* Adjusted padding for alignment */
+}
+
+nav li {
+  height: 50px;
+  background-color: #030303;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: right 0.3s ease;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.logo {
+  margin-right: auto; /* Align logo to the left */
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between; /* Ensure space between logo and links */
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  align-items: center;
+  flex-grow: 1; /* Take up remaining space */
+}
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
